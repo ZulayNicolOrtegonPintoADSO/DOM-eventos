@@ -1,14 +1,10 @@
-const txtn1 = document.getElementById("n1");
-// const txtn1 = document.querySelector("#n1");
-const txtn2 = document.getElementById("n2");
-const respuesta = document.getElementById("resp");
-const btncalcular = document.getElementById("calcular");
-btncalcular.addEventListener('click' , calcular)
+const respuesta = document.getElementById(`resp`);
+const btnejecutar = document.getElementById(`ejecuta`);
+btnejecutar.addEventListener('click' , iniciar);
 
-function calcular(){
-    const op1= parseFloat(txtn1.value);
-    const op2= parseFloat(txtn2.value);
-    let resp= op1+op2
-    respuesta.innerText=resp
-    respuesta.style="text-align:center;font-size:50px; border-style: double; border-color: blue;"
+let frutas = ["manzana" , "banana" , "pera" , "fresa"];
+
+function iniciar(){
+    respuesta.innerText= "lA CANTIDAD DE ELEMENTOS Q HAY: " + frutas.length + "\n EN EL INDEX 1 ESTÁ: " + frutas[1]  + frutas.length + "\n EL ÚLTIMO ELEMENTO DEL ARRAYS ES: " + frutas[frutas.length-1]
 }
+
